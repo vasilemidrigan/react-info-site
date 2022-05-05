@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  margin: 50px auto;
+  width: 80vw;
+}
+
+/* Components -- 1 */
+/* Component1Child */
+.component1Child {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #36ae7c;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
