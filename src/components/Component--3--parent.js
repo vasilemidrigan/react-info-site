@@ -7,19 +7,38 @@ import boxes from "../boxes";
 export default function Component1Parent() {
   const [squares, setSquares] = React.useState(boxes);
 
-  // • Here's the function in the parent component that toggles the
-  //     props.on
-  // • In case we want to monitor which component was clicked for ex.,
-  //     we can do next:
-  //   1. Pass id={el.id} for our child components (in order to
-  //              have access to our component id)
-  //      (Line 27)
-  //   2. In our child component we're running our toggle
-  //              function with props.id argument, and it should be
-  //              inside another anonymous function
-  //      (Line 10 - file Component--3--child.js)
   function toggle(id) {
+    /**
+     * Challenge: use setSquares to update the
+     * correct square in the array.
+     *
+     * Make sure not to directly modify state!
+     */
     console.log(`BOX ID - ${id}`);
+
+    // 1. Declaring a new array
+    // 2. Loop through prevSquares, if the id of the current object is
+    //    the same as the id of the object in the iteration then update
+    //    it (replace object.on property to opposite)
+    //    else push the square without modifications
+    // 3. Return the update array
+
+    setSquares((prevSquares) => {
+      const newArr = [];
+      for (let i = 0; i < prevSquares.length; i++) {
+        const currentObj = prevSquares[i];
+        if (currentObj.id === id) {
+          const updatedObj = {
+            ...currentObj,
+            on: !currentObj.on,
+          };
+          newArr.push(updatedObj);
+        } else {
+          newArr.push(currentObj);
+        }
+      }
+      return newArr;
+    });
   }
 
   const renderBoxes = squares.map((el) => {
