@@ -1,0 +1,35 @@
+•  How to build simple static pages with React.
+
+•  How to think in React? It is kind of changing 
+   the aprouch how to build applications.
+
+•  What's the difference between imperative and 
+   declarative programming?
+   - Declarative:
+     is like the computer asks you What should be done?
+     (Just tell the computer what to do and it will
+     care about how to get it done!)
+     Example:
+     -------------------------------------------------------------------------------------------
+     ReactDOM.render(<h1 className="header">Hello, React!</h1>, document.getElementById("root"))
+     -------------------------------------------------------------------------------------------
+   - Imperative:
+     is like the computer asks you How should it be done?
+     (Describe to the computer every step how to do 
+     something, and it will do it!)
+     Example:
+     --------------------------------------------------------
+     const h1 = document.createElement("h1")
+     h1.textContent = "This is an imperative way to program"
+     h1.className = "header"
+     document.getElementById("root").append(h1)
+     -------------------------------------------------------- 
+•  Write composable and reusable components.
+
+•  Why we care about React?
+  - It is composable! (We can build components and manipulate
+    them, reuse, structure, etc )
+
+•  What is JSX?
+
+•  How to build custom components?
