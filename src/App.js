@@ -1,9 +1,9 @@
 import React from "react";
-import DeclVsImper from "./components/decl_vs_imper";
+import JSX from "./components/jsx";
 
 // Import Styles
 import "./index.css";
 
 export default function App() {
-  return <DeclVsImper />;
+  return <JSX />;
 }
